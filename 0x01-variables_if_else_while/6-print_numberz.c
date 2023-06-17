@@ -1,7 +1,6 @@
 #include <stdio.h>
 /**
- * main -
- * Prints all single digit numbers of base 10 starting from 0
+ * main - Prints all single digit numbers of base 10 starting from 0
  * Description: using the main function
  * this program prints numberz
  * Return: 0
