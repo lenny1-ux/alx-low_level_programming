@@ -1,14 +1,19 @@
-#include <stdio.h>
+#include "main.h"
 /**
-  *Main-Printing _putchar alone
-  *
-  *Not pushed
-  * Return :0 success
-  */
-
+ * main - prints the string "main" from a character array.
+ * Return: 0 on success.
+ */
 int main(void)
+
 {
-	putchar("_putchar");
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
 	return (0);
 }
-	
