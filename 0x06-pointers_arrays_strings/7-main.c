@@ -15,4 +15,4 @@ char s[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\n"
     printf("%s", p);
     printf("%s", s);
     return (0);
-}i
+}
