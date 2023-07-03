@@ -11,11 +11,9 @@
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	/* i = iterator for n1 and n2; j = iterator for r; n = carry over no*/
 	int i, j, n;
 
 	i = j = n = 0;
-	/* if r[0] >= 10, set value to 1 & increase buffer size by 1*/
 	if ((n1[0] - '0') + (n2[0] - '0') >= 10)
 	{
 		r[0] = 1 + '0';
