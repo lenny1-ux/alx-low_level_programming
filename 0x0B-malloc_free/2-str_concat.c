@@ -1,37 +1,29 @@
-#include "main.h"
 #include <stdlib.h>
 /**
- * str_concat - function that concatenates two strings
- * @s1: paramater for string 1
- * @s2: parameter for string 2
- * Return: Always 0.
+ * str_concat - concatenates two strings
+ * @s1: first string
+ * @s2: second string
+ * Return: pointer to a new buffer containing s1 and s2
  */
 char *str_concat(char *s1, char *s2)
 {
-	int a, b, c;
-	char *my_array;
+	char *p;
+	int s1count, s2count, sizeBuffer, i;
 
-	c = 0;
-	my_array = malloc(sizeof(*s1 + *s2));
-
-	if (my_array == NULL)
+	/*Check for valid strings*/
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	for (s1count = 0; s1[s1count]; s1count++)
+		;
+	for (s2count = 0; s2[s2count]; s2count++)
+		;
+	sizeBuffer = s1count + s2count + 1;
+	p = malloc(sizeBuffer * sizeof(char));
+	if (p == NULL)
 		return (NULL);
-
-	a = 0;
-	while (s1[a] != '\0')
-	{
-		my_array[c] = s1[a];
-		a++;
-		c++;
-	}
-	b = 0;
-	while (s2[b] != '\0')
-	{
-		my_array[c] = s2[b];
-		b++;
-		c++;
-	}
-
-	return (my_array);
-	free(my_array);
+	for (i = 0; i < sizeBuffer; i++)
+		i < s1count ? (p[i] = s1[i]) : (p[i] = s2[i - s1count]);
+	return (p);
 }
