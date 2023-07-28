@@ -7,15 +7,20 @@
  * pointer to the list_t list to be shown
  * Return: the number of nodes printed
  */
-
 size_t print_list(const list_t *h)
 {
-	size_t i;
+ size_t s = 0;
 
-	for (i = 0; h; i++)
-	{
-		printf("[%d] %s\n", h->len, h->str);
-		h = h->next;
-	}
-	return (i);
+ while (h)
+ {
+ if (!h->str)
+ printf("[0] (nil)\n");
+ else
+ printf("[%u] %s\n", h->len, h->str);
+ h = h->next;
+ s++;
+ }
+
+ return (s);
 }
+
