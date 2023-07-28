@@ -4,7 +4,7 @@
 #include <stddef.h>
 
 /**
-  * _strlen - gets length of the string
+  * _strlen - get the string length
   * @s: string
   * Return: length of the string
   */
@@ -19,7 +19,7 @@ int _strlen(const char *s)
 
 /**
   * _strdup - create string duplicate function
-  * src: source of string to duplicate
+  * @src: duplicate the string source
   * Return: pointer to malloc'd space with copied string
   */
 void *_strdup(const char *src)
@@ -37,9 +37,9 @@ void *_strdup(const char *src)
 	return (dest);
 }
 /**
-  * add_node_end : add new nodes to the end of the list
-  * head: current place in the list
-  * str: string to add to the head
+  * add_node_end - add new nodes to the end of the list
+  * @head: current position in the list
+  * @str: string  add to the heads
   * Return: pointer to current position in list
   */
 list_t *add_node_end(list_t **head, const char *str)

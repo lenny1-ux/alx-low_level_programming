@@ -3,8 +3,8 @@
 #include <stddef.h>
 
 /**
-  * free_list - frees a linked list
-  * head: the beginning of the list
+  * free_list - sets free a linked list
+  * @head: start of the list
   * Return 0 : success
   */
 void free_list(list_t *head)

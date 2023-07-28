@@ -2,8 +2,8 @@
 #include <stdlib.h>
 
 /**
-  * strlen - gets length of the string
-  * string
+  * _strlen - to get length of the string
+  * @s: must be string
   * Return: length of the string
   */
 int _strlen(const char *s)
@@ -16,9 +16,9 @@ int _strlen(const char *s)
 }
 
 /**
-  * add_node - add new nodes to the list
-  * head: current place in the list
-  * str: string to add to the head
+  * add_node - adds new nodes to the list
+  * @head: show current place in the list
+  * @str: a string to add to the head
   * Return: pointer to current position in list
   */
 list_t *add_node(list_t **head, const char *str)
